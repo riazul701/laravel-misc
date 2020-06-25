@@ -1,0 +1,21 @@
+PUT http://localhost/laravel-misc/public/api/post
+Content-Type: application/json
+
+{
+    "id" : "1",
+    "title" : "This Post Has Been Updated!",
+    "body" : "Some fresh new updates for you."
+}
+
+###
+POST http://localhost/laravel-misc/public/api/post
+Content-Type: application/json
+
+{
+    "title" : "New post via API request",
+    "body" : "This post was created by sending a POST request to the Laravel API using Postman."
+}
+
+###
+DELETE http://localhost/laravel-misc/public/api/post/5
+Content-Type: application/json
