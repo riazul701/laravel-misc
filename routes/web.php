@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/users', 'HomeController@getUsers')->name('users');
+
+Route::get('users-json', function () {
+    return App\User::paginate(4);
+});
