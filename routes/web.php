@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\User;
+use App\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
 Route::get('/', function () {
-    return view('welcome');
+//    $users = User::select('*')->get();
+//    return $users;
+
+//    $admins = Admin::select('*')->get();
+//    return $admins;
+
+//    $users = User::select('*')->withoutGlobalScope(ActiveScope::class)->get();
+//    return $users;
+
+    $admins = Admin::select('*')->withoutGlobalScope(ActiveScope::class)->get();
+    return $admins;
 });
