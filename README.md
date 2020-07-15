@@ -10,3 +10,5 @@ php artisan make:migration create_products_table --create=products
 php artisan migrate
 php artisan serve
 ```
+### Run Project
+[http://localhost:8000/ajaxproducts](http://localhost:8000/ajaxproducts)
