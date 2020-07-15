@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+//Route::get('simple-route', function () {
+//    return 'This is Simple Route Example of ItSolutionStaff.com';
+//});
+
+//Route::view('my-route', 'index');
+
+//Route::get('my-route', 'TestController@index');
+
+//Route::get('users/{id}', 'UserController@show');
+
+Route::get('users', 'UserController@index');
+Route::post('users', 'UserController@post');
+Route::put('users/{id}', 'UserController@update');
+Route::delete('users/{id}', 'UserController@delete');
