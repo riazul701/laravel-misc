@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('my-form','HomeController@myform');
+Route::post('my-form','HomeController@myformPost')->name('my.form');
