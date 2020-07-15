@@ -11,5 +11,7 @@ php artisan make:model Post
 composer require livewire/livewire
 php artisan make:livewire posts
 php artisan serve
-http://localhost:8000/
 ```
+
+### Run Project
+[http://localhost:8000/](http://localhost:8000/)
