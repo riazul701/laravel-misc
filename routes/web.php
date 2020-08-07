@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/helper1', function () {
+    $imageName = 'example.png';
+    $fullpath = productImagePath($imageName);
+    print_r($fullpath);
+});
+
+Route::get('/helper2', function () {
+    return view('date_format');
+});
