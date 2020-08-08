@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//use Helper;
+use App\Helpers\Helper;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('my-helper', function () {
+//    return view('myhelper');
+    return Helper::homePageURL();
 });
