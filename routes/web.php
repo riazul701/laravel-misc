@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Post;
+use App\Video;
+use App\Comment;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +18,34 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('create-post-comment', function () {
+    $post = Post::find(1);
+
+    $comment = new Comment;
+    $comment->body = "Hi ItSolutionStuff.com";
+
+    $post->comments()->save($comment);
+});
+
+Route::get('create-video-comment', function () {
+    $video = Video::find(1);
+
+    $comment = new Comment;
+    $comment->body = "Hi ItSolutionStuff.com";
+
+    $video->comments()->save($comment);
+});
+
+Route::get('get-post-comment', function () {
+    $post = Post::find(1);
+
+    dd($post->comments);
+});
+
+Route::get('get-video-comment', function () {
+    $video = Video::find(1);
+
+    dd($video->comments);
 });
