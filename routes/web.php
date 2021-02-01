@@ -15,4 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+Route::get('flash-message-success', 'HomeController@create_success');
+Route::get('flash-message-error', 'HomeController@create_error');
+Route::get('flash-message-warning', 'HomeController@create_warning');
+Route::get('flash-message-info', 'HomeController@create_info');
+Route::get('flash-message-validate', 'HomeController@create_validate');
