@@ -15,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+
+//    $user->notify(new MyFirstNotification($details));
+//    dd($user->notifications);
 });
+
+Route::get('send', 'HomeController@sendNotification');
