@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('notification', 'HomeController@notification');
+Route::get('notification-info', 'HomeController@notification_info');
+Route::get('notification-warning', 'HomeController@notification_warning');
+Route::get('notification-error', 'HomeController@notification_error');
