@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('form');
 });
+
+Route::post('submit', 'HomeController@store')->name('submit');
+//Route::post('submit', 'HomeController@store_2')->name('submit');
