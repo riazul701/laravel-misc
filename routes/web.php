@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('postCreate','PostController@postCreate');
+Route::post('postData','PostController@postData')->name('postData');
