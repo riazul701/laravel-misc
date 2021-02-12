@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware'=>'is-ban'], function(){
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('users', 'UserController@index')->name('users.index');
+    Route::get('userUserRevoke/{id}', array('as'=> 'users.revokeuser', 'uses' => 'UserController@revoke'));
+    Route::post('userBan', array('as'=> 'users.ban', 'uses' => 'UserController@ban'));
+});
