@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('move-image', 'DemoController@moveImage');
+Route::get('move-image-2', 'DemoController@moveImage_2');
