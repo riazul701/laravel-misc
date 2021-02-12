@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('copy-image', 'DemoController@copyImage');
+Route::get('copy-image-2', 'DemoController@copyImage_2');
