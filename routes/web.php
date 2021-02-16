@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('create-1', 'HomeController@create_1');
+Route::get('create-2', 'HomeController@create_2');
+Route::get('create-3', 'HomeController@create_3');
+Route::get('create-4', 'HomeController@create_4');
